@@ -1,0 +1,24 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .item {
+        cursor: pointer;
+        img {
+            width: 200px;
+            height: 300px;
+        }
+
+        .btn-buy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+            button {
+                width: 70px;
+                height: 25px;
+            }
+        }
+    }
+}
