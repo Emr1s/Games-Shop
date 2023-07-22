@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     gap: 30px;
     .item {
+        transition: 0.2s ease-in-out;
         img {
             width: 200px;
             height: 300px;
@@ -20,6 +21,10 @@
                 cursor: pointer;
             }
         }
+    }
+
+    .item:hover {
+        transform: scale(1.1);
     }
 
     .link{
