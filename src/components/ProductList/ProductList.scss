@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     gap: 30px;
     .item {
-        cursor: pointer;
         img {
             width: 200px;
             height: 300px;
@@ -18,7 +17,14 @@
             button {
                 width: 70px;
                 height: 25px;
+                cursor: pointer;
             }
         }
+    }
+
+    .link{
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
     }
 }
