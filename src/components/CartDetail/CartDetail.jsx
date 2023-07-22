@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { removeCard, incCount, decCount } from '../../store/gameSlice'
 import './CartDetail.scss'
 import { Link } from 'react-router-dom'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 const CartDetail = () => {
     const cart = useSelector(state => state.game.cart)
@@ -47,7 +48,10 @@ const CartDetail = () => {
                 </div>
             }
             <div className="back">
-                <Link to='/' className='name'>Back to shop</Link>
+                <Link to='/' className='name'>
+                    <AiOutlineArrowLeft />
+                    <p>Back to shop</p>
+                </Link>
             </div>
         </div>
     )

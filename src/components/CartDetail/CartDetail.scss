@@ -77,7 +77,7 @@
 
 
     }
-    
+
     .empty{
         text-align: center;
         font-size: 24px;
@@ -86,12 +86,17 @@
     }
 
     .back{
-        text-align: center;
+        margin: 0px 30px;
         font-size: 20px;
 
         .name{
             text-decoration: none;
-            color: #999;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            width: 150px;
         }
     }
 
