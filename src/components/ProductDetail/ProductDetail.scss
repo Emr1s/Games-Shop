@@ -1,0 +1,29 @@
+.product-detail{
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+    padding: 100px 0;
+    display: flex;
+
+    .left{
+        margin: 0px 50px;
+        
+        img{
+            width: 300px;
+        }
+    }
+    .right{
+        margin: 0px 50px;
+        width: 50%;
+        .info{
+            span{
+                display: block;
+                text-align: justify;    
+                font-size: 16px;
+            }
+        }
+    }
+}
