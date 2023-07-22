@@ -29,7 +29,8 @@ const gameSlice = createSlice({
             
             },
         ],
-        cart: []
+        cart: [],
+        search: "",
     },
     reducers: {
         addCard: (state, action) => {
@@ -47,10 +48,14 @@ const gameSlice = createSlice({
             
             const item = state.cart.find(item => item.id === action.payload)
             item.count <= 1 ? item.count = 1 : item.count--
-        }
+        },
+        searchFilter: (state, action) => {
+            state.search = action.payload
+        },
+        
     }
 })
 
-export const { addCard,removeCard,incCount, decCount } = gameSlice.actions;
+export const { addCard,removeCard,incCount, decCount, searchFilter } = gameSlice.actions;
 
 export default gameSlice.reducer;
