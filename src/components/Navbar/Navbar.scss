@@ -1,5 +1,5 @@
 .navbar{
-    background: rgb(33, 78, 63);
+    background: #2fad83;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -20,8 +20,11 @@
             }
         }
 
+       
+
         .right {
             margin: 30px 100px;
+            text-decoration: none;
             .cart-item {
                 width: 30px;
                 height: 50px;
@@ -33,9 +36,13 @@
                 border-radius: 50%;
                 padding: 1px 5px;
                 color: #fff;
+                text-decoration: none;
                 
             }
-
+            .link{
+                color: #fff;
+                text-decoration: none;
+            }
         }
    
 }

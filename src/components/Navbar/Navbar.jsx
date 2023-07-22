@@ -1,14 +1,14 @@
 import React from 'react'
 import './Navbar.scss'
 import logo from '../../image/logo.png'
-import { AiOutlineShoppingCart } from "react-icons/ai"
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { AiOutlineShoppingCart} from "react-icons/ai"
+import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
   const cart = useSelector(state => state.game.cart)
-  const [open, setOpen] = useState(false)
+
   return (
     <div className='navbar'>
       <div className="left">
@@ -18,7 +18,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="right">
-        <Link to='/cart'><AiOutlineShoppingCart className='cart-item' onClick={() => setOpen(!open)} />
+        <Link to='/cart' className='link'><AiOutlineShoppingCart className='cart-item'  />
           {cart.length > 0 && <span className='cart-length'>{cart.length}</span>}
         </Link>
       </div>
