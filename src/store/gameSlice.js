@@ -5,7 +5,7 @@ const gameSlice = createSlice({
     initialState : {
         game: [
             {
-                id: 0,
+                id: "price_1NXNGvLfnnZP2XlMfpB1nCc2",
                 name: "Battle Field 2",
                 price: 50,
                 count: 1,
@@ -13,7 +13,7 @@ const gameSlice = createSlice({
             
             },
             {
-                id: 1,
+                id: "price_1NXNGQLfnnZP2XlMeB4z05ch",
                 name: "Battle Field IV",
                 price: 25,
                 count: 1,
@@ -21,7 +21,7 @@ const gameSlice = createSlice({
             
             },
             {
-                id: 2,
+                id: "price_1NXOEsLfnnZP2XlMFJHw4SZK",
                 name: "Diablo 3",
                 price: 25,
                 count: 1,
@@ -29,7 +29,7 @@ const gameSlice = createSlice({
             
             },
             {
-                id: 3,
+                id: "price_1NXOFULfnnZP2XlMzsv82ESj",
                 name: "Call of Duty: Modern Warfare® 2",
                 price: 30,
                 count: 1,
@@ -37,7 +37,7 @@ const gameSlice = createSlice({
             
             },
             {
-                id: 4,
+                id: "price_1NXNFCLfnnZP2XlM2Hf4pSxw",
                 name: "CS:GO",
                 price: 20,
                 count: 1,
@@ -45,7 +45,7 @@ const gameSlice = createSlice({
             
             },
             {
-                id: 5,
+                id: "price_1NXOGBLfnnZP2XlMo2hmFRup",
                 name: "Heroes of might and magic",
                 price: 15,
                 count: 1,
