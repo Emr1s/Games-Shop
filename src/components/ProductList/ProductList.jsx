@@ -1,13 +1,19 @@
 import React from 'react'
 import './ProductList.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCard, searchFilter } from '../../store/gameSlice'
-import { Link } from 'react-router-dom'
+import { addCard, searchFilter, clearFilter } from '../../store/gameSlice'
+import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const ProductList = () => {
     const products = useSelector(state => state.game.game)
     const search = useSelector(state => state.game.search)
     const dispatch = useDispatch()
+    const location = useLocation()
+
+    useEffect(() => {
+        dispatch(clearFilter())
+    },[location])
 
     return (
         <div className="list">
