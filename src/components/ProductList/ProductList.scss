@@ -20,6 +20,13 @@
             padding: 6px;
         }
     }
+
+    .sort{
+        margin: 15px 0px;
+        display: flex;
+        justify-content: end;
+        
+    }
     .product-list {
         display: flex;
         flex-wrap: wrap;
