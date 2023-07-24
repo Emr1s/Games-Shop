@@ -8,6 +8,29 @@ import { AiOutlineArrowLeft } from 'react-icons/ai'
 const CartDetail = () => {
     const cart = useSelector(state => state.game.cart)
     const dispatch = useDispatch()
+    const parse = cart.map(item => ({
+        id: item.id,
+        count: item.count 
+    }));
+
+    console.log(parse)
+    const checkout = async () => {
+        await fetch('http://localhost:4000/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                items: parse
+            })
+        }).then((response) => {
+            return response.json()
+        }).then((response) => {
+            if(response.url){
+                window.location.assign(response.url)
+            }
+        })
+    }
     return (
         <div className='cart'>
             <div className="total">
@@ -16,7 +39,7 @@ const CartDetail = () => {
                 </div>
                 <div className="cart-info">
                     <p>Item`s in cart: {cart.length}</p>
-                    <p>Total price: {(cart.reduce((total, acc) => total + acc.price * acc.count, 0) * 1)} $</p>
+                    <p className='pay'>Total price: {(cart.reduce((total, acc) => total + acc.price * acc.count, 0) * 1)} $</p>
 
                 </div>
             </div>
@@ -47,11 +70,18 @@ const CartDetail = () => {
                     <span>Cart is empty</span>
                 </div>
             }
-            <div className="back">
-                <Link to='/' className='name'>
-                    <AiOutlineArrowLeft />
-                    <p>Back to shop</p>
-                </Link>
+            <div className="bottom">
+                <div className="back">
+                    <Link to='/' className='name'>
+                        <AiOutlineArrowLeft />
+                        <p>Back to shop</p>
+                    </Link>
+                </div>
+                    <div className="payment">
+                        <button className={cart.length === 0 ? 'disabled' : 'btn-pay'} onClick={checkout}>Payment</button>
+                    </div>
+                
+
             </div>
         </div>
     )
