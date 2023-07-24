@@ -6,6 +6,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail'
 import CartDetail from './components/CartDetail/CartDetail'
 import { BrowserRouter } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
+import ScrollToTop from './utils/ScrollToTop'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Products />} />
           <Route path='/product/:productId' element={<ProductDetail />} />
