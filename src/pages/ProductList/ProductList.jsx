@@ -1,9 +1,10 @@
 import React from 'react'
 import './ProductList.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { addCard, searchFilter, clearFilter } from '../../store/gameSlice'
+import { addCard, clearFilter } from '../../store/gameSlice'
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import SortProduct from '../../components/SortProduct/SortProduct'
 
 const ProductList = () => {
     const products = useSelector(state => state.game.game)
@@ -37,17 +38,7 @@ const ProductList = () => {
 
     return (
         <div className="list">
-            <div className="center">
-                <input type="text" onChange={e => dispatch(searchFilter(e.target.value))} />
-            </div>
-            <div className="sort">
-                <select value={sort} onChange={sortHandler} >
-                    <option value="all">All</option>
-                    <option value="price-desc">Sort by Price (High to Low)</option>
-                    <option value="price-asc">Sort by Price (Low to High)</option>
-                    <option value="name-asc">Sort by Name (A to Z)</option>
-                </select>
-            </div>
+            <SortProduct sort={sort} sortHandler={sortHandler}/>
             <div className="product-list">
                 {sortedProducts.filter(item => {
                     if (search === '') {

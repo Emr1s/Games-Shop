@@ -1,0 +1,28 @@
+.center{
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        padding: 5px;
+        width: 250px;
+        font-size: 16px;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    .search-icon{
+        background: #fff;
+        cursor: pointer;
+        padding: 6px;
+    }
+}
+
+.sort{
+    margin: 20px auto;
+    display: flex;
+    justify-content: end;
+    
+}

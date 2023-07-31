@@ -1,36 +1,9 @@
 .list {
-    .center{
-        margin: 30px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        input{
-            padding: 5px;
-            width: 250px;
-            font-size: 16px;
-        }
-
-        input:focus{
-            outline: none;
-        }
-
-        .search-icon{
-            background: #fff;
-            cursor: pointer;
-            padding: 6px;
-        }
-    }
-
-    .sort{
-        margin: 15px 0px;
-        display: flex;
-        justify-content: end;
-        
-    }
+    
     .product-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 20px;
         
         .item {
             transition: 0.2s ease-in-out;
